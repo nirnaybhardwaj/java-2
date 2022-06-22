@@ -8,18 +8,31 @@ public class Difference_of_every_two_consecutive_characters {
     }
     public static String solution(String str){
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(str.charAt(0));
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(str.charAt(0));
+//
+//        for (int i = 1; i < str.length(); i++) {
+//            char ch1 = str.charAt(i);
+//            char ch2 = str.charAt(i -1);
+//            int gap = ch1 - ch2;
+//
+//            sb.append(gap);
+//            sb.append(ch1);
+//        }
+//
+//        return sb.toString();
 
-        for (int i = 1; i < str.length(); i++) {
-            char ch1 = str.charAt(i);
-            char ch2 = str.charAt(i -1);
-            int gap = ch1 - ch2;
+        String ans = "";
 
-            sb.append(gap);
-            sb.append(ch1);
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            ans += ch;
+
+            if(i + 1 < str.length()){
+                int diff = str.charAt(i + 1) - ch;
+                ans += diff;
+            }
         }
-
-        return sb.toString();
+        return ans;
     }
 }
