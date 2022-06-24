@@ -6,15 +6,23 @@ public class Power_linear {
         int n = sc.nextInt();
         int p = sc.nextInt();
 
-        int ans = power(n,p);
-        System.out.println(ans);
+        int ans = 0;
+
+//        if(p < 0){
+//            ans = power(n, -p);
+//            System.out.println(1 * 1.0/ ans);
+//        }else {
+
+            ans = power(n, p);
+            System.out.println(ans);
+//        }
+
     }
     public static int power(int x, int n){
 
         if(n == 0) return 1;
         int p = power(x, n - 1);
-        int pow = x * p;
 
-        return pow;
+        return x * p;
     }
 }

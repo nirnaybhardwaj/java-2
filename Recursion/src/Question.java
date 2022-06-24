@@ -11,9 +11,17 @@ public class Question {
 
             int[] arr = new int[size];
             for (int j = 0; j < arr.length; j++) {
-                arr[i] = sc.nextInt();
+                arr[j] = sc.nextInt();
             }
+            int total = 0;
+            for (int k = 0; k < arr.length; k++) {
+                total += arr[k];
+            }
+            int diff = total - fuel;
+            System.out.println(diff);
         }
 
+
     }
+
 }
